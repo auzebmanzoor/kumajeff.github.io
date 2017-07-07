@@ -16,18 +16,29 @@
 title: bearlybits
 email: jeffrey@bearlybits.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  bearlybits is an intersection of travel,
+  photography, languages, and code.
+  Oh and hopefully, a bit of fun.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://bearlybits.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kumajeff
 github_username:  rallykuma
 
+excerpt_separator: <!--more-->
+
+paginate_multiple:
+  - paginate: 3
+    paginate_path: '/page:num/'
+    sub_dir: ''
+  - paginate: 9
+    paginate_path: '/blog/page:num/'
+    sub_dir: ''
+
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock

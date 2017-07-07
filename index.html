@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<header class="landing__header mb-5 text-white">
+    <div class="container px-5 px-sm-3">
+      <p class="display-2">Hi, I'm Jeffrey!</p>
+      <p class="display-4"><span class="text-copy text-yellow">bearlybits</span> is an intersection of travel,
+      <br>photography, languages, and code.
+      <br><br>Oh and hopefully, a bit of fun. <i class="fa fa-heart text-danger"></i></p>
+    </div>
+</header>
+<section class="container">
+    <h3 class="mb-4">recent posts</h3>
+    <div class="card-deck mb-3">
+        {% for post in paginator.posts %}
+            <div class="card border-0 mb-4">
+                <a class="hidden-sm-down" href="{{ post.url }}"><img class="card-img-top w-100 mb-4 rounded-0" src="assets/img/leaf.jpg" alt="Blog post cover image"></a>
+                <h5 class="card-title mb-2"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                <time class="card-subtitle text-muted mb-2" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                <span class="text-muted">{{ post.excerpt | strip_html | truncate: 150 }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mb-5">
+      <a href="/blog" class="btn btn btn-outline-danger">view more</a>
+    </div>
+</section>

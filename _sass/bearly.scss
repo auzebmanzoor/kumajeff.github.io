@@ -1,0 +1,167 @@
+// Import partials.
+@import
+  // Font Awesome 5 alpha
+//   "fa/font-awesome-brands",
+//   "fa/font-awesome-core",
+//   "fa/font-awesome-light",
+//   "fa/font-awesome-regular",
+//   "fa/font-awesome-solid",
+  // Bootstrap v4.0.0-alpha.6
+  "bootstrap/variables",
+  "custom",
+  "bootstrap/mixins",
+  // Reset and dependencies
+  "bootstrap/normalize",
+  "bootstrap/print",
+  // Core CSS
+  "bootstrap/reboot",
+  "bootstrap/type",
+  "bootstrap/images",
+  "bootstrap/code",
+  "bootstrap/grid",
+  "bootstrap/tables",
+  "bootstrap/forms",
+  "bootstrap/buttons",
+  // Components
+  "bootstrap/transitions",
+  "bootstrap/dropdown",
+  "bootstrap/button-group",
+  "bootstrap/input-group",
+  "bootstrap/custom-forms",
+  "bootstrap/nav",
+  "bootstrap/navbar",
+  "bootstrap/card",
+  "bootstrap/breadcrumb",
+  "bootstrap/pagination",
+  "bootstrap/badge",
+  "bootstrap/jumbotron",
+  "bootstrap/alert",
+  "bootstrap/progress",
+  "bootstrap/media",
+  "bootstrap/list-group",
+  "bootstrap/responsive-embed",
+  "bootstrap/close",
+  // Components w/ JavaScript
+  "bootstrap/modal",
+  "bootstrap/tooltip",
+  "bootstrap/popover",
+  "bootstrap/carousel",
+  // Utility
+  "bootstrap/utilities",
+  // Bearlybits Custom
+  "bearly/syntax-highlighting",
+  "bearly/utilities"
+;
+
+body {
+    margin-top: 82px;
+}
+
+.nav-container {
+    background-color: rgba(255,255,255,0.8);
+    padding: 15px 0;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    .nav-item {
+        font-size: 1.5rem;
+        font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: bold;
+    }
+    .nav-link {
+        color: $gray-light;
+        &:hover,
+        &.active,
+        &:focus {
+            color: #0091ea;
+            border-bottom: 3px solid #0091ea;
+        }
+        padding: 0.5em 0 0.1em 0;
+        margin: 0 1em 0 1em;
+    }
+}
+
+.site-logo {
+    font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+    &:hover,
+    &:focus {
+        color: $orange;
+        text-decoration: none;
+    }
+}
+
+.landing__header {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    background-color: #8bc34a;
+    background-image: url("img/leaf.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset -3rem -3rem 15rem rgba(0, 0, 0, 0.6);
+    box-shadow: inset -3rem -3rem 15rem rgba(0, 0, 0, 0.6);
+}
+
+.page__header {
+    padding-top: 4rem;
+}
+
+.text-copy {
+    font-family: "Quicksand", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+}
+
+.card-img-top {
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.text-quiet {
+    color: #bdbdbd;
+}
+
+a {
+    @extend .text-copy;
+    transition-duration: 0.2s;
+    transition-property: color, border;
+}
+
+.social-media-link {
+    &:hover {
+        color: $orange;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    
+}
+@include media-breakpoint-down(sm) {
+    
+}
+@include media-breakpoint-down(md) {
+    html {
+        font-size: 14px;
+    }
+    .display-4 {
+        font-size: $display4-size * 0.75;
+    }
+    .display-3 {
+        font-size: $display3-size * 0.75;
+    }
+    .display-2 {
+        font-size: $display2-size * 0.75;
+    }
+    .display-1 {
+        font-size: $display1-size * 0.75;
+    }
+}
+@include media-breakpoint-down(lg) {
+    html {
+        font-size: 16px;
+    }
+}
