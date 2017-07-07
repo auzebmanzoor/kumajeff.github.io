@@ -12,7 +12,7 @@ layout: default
 <section class="container">
     <h3 class="mb-4">recent posts</h3>
     <div class="card-deck mb-3">
-        {% for post in paginator.posts %}
+        {% for post in site.posts limit: 3 %}
             <div class="card border-0 mb-4">
                 <a class="hidden-sm-down" href="{{ post.url }}"><img class="card-img-top w-100 mb-4 rounded-0" src="assets/img/leaf.jpg" alt="Blog post cover image"></a>
                 <h5 class="card-title mb-2"><a href="{{ post.url }}">{{ post.title }}</a></h5>
